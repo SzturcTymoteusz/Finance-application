@@ -1,0 +1,54 @@
+.login
+    background-color: rgba(84, 84, 255, 0.8)
+    width: 350px
+    display: flex
+    flex-direction: column
+    padding: 15px
+
+.login_form
+    display: flex
+    flex-direction: column
+
+.login_input
+    height: 40px
+    font-size: 16px
+    padding: 12px
+    margin: 13px
+
+.login_btn
+    height: 45px
+    font-size: 24px
+    line-height: 45px
+    color: white
+    margin: 13px
+    border: none
+    outline: none
+    background-color: rgba(163, 163, 205, 1)
+    &:hover
+        cursor: pointer
+        background-color: rgba(113, 113, 145, 1)
+
+.login_btn--create
+    align-self: center
+    width: 200px
+    margin-top: 110px
+    font-size: 16px
+    background-color: rgba(199, 48, 113, 1)
+    &:hover
+        background-color: rgba(175, 42, 100, 1)
+
+// Media queries
+@media ( max-width: 900px )
+    .login
+        width: 300px
+        padding: 5px
+
+    .login_input
+        padding: 6px
+        margin: 7px
+
+    .login_btn
+        margin: 7px
+
+    .login_btn--create
+        margin-top: 50px
