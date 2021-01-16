@@ -1,7 +1,8 @@
 const  express = require('express');
 const path = require('path');
 const hbs = require('hbs');
-
+require('./db/mongoose');
+const userRouter = require('./routers/userRouter');
 
 
 const app = express();
@@ -20,6 +21,8 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
+app.use(express.json());
+app.use(userRouter);
 
 app.get('/', (req, res) => {
     res.render('index');

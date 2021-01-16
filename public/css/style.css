@@ -5,7 +5,14 @@
           box-sizing: border-box;
 }
 
+#fm-widget-root {
+  height: 0px;
+}
+
 .page {
+  position: relative;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100vh;
   min-height: 600px;
@@ -18,6 +25,7 @@
       grid-template-areas: '.' 'container' '.';
   background-image: url("/img/background.jpg");
   background-size: cover;
+  z-index: 3;
 }
 
 .page_container {
@@ -32,6 +40,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 30px;
+}
+
+.page_container--blur {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
 }
 
 .page_section {
@@ -169,5 +182,96 @@
   .login_btn--create {
     margin-top: 50px;
   }
+}
+
+.registration {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background-color: #5454ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 2px 2px 6px black;
+          box-shadow: 2px 2px 6px black;
+  padding: 30px;
+}
+
+.registration--show {
+  visibility: visible;
+}
+
+.registration_title {
+  height: 40px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.registration_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration_label {
+  font-size: 24px;
+  color: white;
+  margin: 5px;
+}
+
+.registration_input {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.registration_btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  width: calc(100%  -  60px);
+  font-size: 24px;
+  line-height: 45px;
+  color: white;
+  margin: 30px;
+  border: none;
+  outline: none;
+  background-color: #c73071;
+}
+
+.registration_btn:hover {
+  cursor: pointer;
+  background-color: #af2a64;
+}
+
+.registration_exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+}
+
+.registration_exit:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

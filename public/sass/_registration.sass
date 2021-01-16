@@ -1,0 +1,66 @@
+.registration
+    visibility: hidden
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 400px
+    height: 500px
+    background-color: rgba(84, 84, 255, 1)
+    display: flex
+    flex-direction: column
+    box-shadow: 2px 2px 6px rgba(0,0,0, 1)
+    padding: 30px
+
+.registration--show
+    visibility: visible
+
+.registration_title
+    height: 40px
+    font-size: 48px
+    font-weight: bold
+    line-height: 40px
+    text-align: center
+    margin-bottom: 30px
+    color: white
+
+.registration_form
+    display: flex
+    flex-direction: column
+
+.registration_label
+    font-size: 24px
+    color: white
+    margin: 5px
+
+.registration_input
+    height: 40px
+    font-size: 16px
+    margin-bottom: 20px
+    padding: 5px
+
+.registration_btn
+    position: absolute
+    left: 0
+    bottom: 0
+    height: 45px
+    width: calc(100%  -  60px)
+    font-size: 24px
+    line-height: 45px
+    color: white
+    margin: 30px
+    border: none
+    outline: none
+    background-color: rgba(199, 48, 113, 1)
+    &:hover
+        cursor: pointer
+        background-color: rgba(175, 42, 100, 1)
+
+.registration_exit
+    position: absolute
+    top: 10px
+    right: 10px
+    font-size: 30px
+    color: white
+    &:hover
+        cursor: pointer
