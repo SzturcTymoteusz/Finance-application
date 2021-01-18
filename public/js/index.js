@@ -4,6 +4,9 @@ const registration = document.querySelector('.registration');
 const page = document.querySelector('.page_container');
 const form = document.querySelector('.registration_form');
 const url = 'http://localhost:3000';
+const msgError = document.querySelector('.registration_error');
+const inputs = [...document.querySelectorAll('.registration_form input')];
+
 
 createAccount.addEventListener('click', (e) => {
     registration.classList.add('registration--show');
@@ -15,25 +18,33 @@ closeBtn.addEventListener('click', () => {
     page.classList.remove('page_container--blur');
 });
 
+
+inputs.forEach(input => {
+    input.addEventListener('input', () => msgError.textContent = "")
+})
+
+
+
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const dataForm = new FormData(form);
     const value = Object.fromEntries(dataForm.entries());
 
-    try {
-        const data = await fetch(`${url}/user`, {
+        const data = await fetch(`${url}/users`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(value)
         });
         const response = await data.json();
+
+        if(response.error){
+            msgError.textContent = "Niepoprawne dane";
+            return;
+        }
+
         console.log(response);
-
-    } catch (error) {
-        console.log(error)
-    }
-
 })

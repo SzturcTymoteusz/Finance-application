@@ -1,16 +1,18 @@
 const express = require('express');
 const router = new express.Router();
 const User = require('../models/userModel.js');
+const {validateEmail} = require('../middleware/validateEmail.js')
 
-router.post('/user', async (req, res) => {
-    const user = await new User(req.body)
-
+router.post('/users', validateEmail, async (req, res) => {
     try {
+        if(!req.body.validation) throw new Error('Invalid email');
+
+        const user = await new User(req.body)
         await user.save();
 
-        res.status(201).send(user)
+        res.send(user)
     } catch (e) {
-        res.status(400).send(e);
+        res.send({error : e.message});
     }
 })
 
