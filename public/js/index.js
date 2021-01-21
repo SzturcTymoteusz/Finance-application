@@ -3,7 +3,8 @@ const createAccount = document.querySelector('.login_btn--create');
 const registration = document.querySelector('.registration');
 const page = document.querySelector('.page_container');
 const form = document.querySelector('.registration_form');
-const url = 'http://localhost:3000';
+// const url = 'http://localhost:3000';
+const url = 'https://szturc-finance-app.herokuapp.com/';
 const msgError = document.querySelector('.registration_error');
 const inputs = [...document.querySelectorAll('.registration_form input')];
 
