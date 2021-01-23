@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js -e hbs,js,css,sass"
+    "dev": "nodemon src/index.js -e ,js,css,sass"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.1",
     "mongoose": "^5.11.12",
     "node": "^15.1.0",
     "validator": "^12.2.0"

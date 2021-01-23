@@ -13,6 +13,7 @@ const publicDirectoryPath = path.join(__dirname, '../public');
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
+app.set('view engine', 'html');
 
 app.use(express.json());
 app.use(userRouter);
@@ -20,9 +21,6 @@ app.use(userRouter);
 app.get('/', (req, res) => {
     res.render('index');
 });
-
-
-
 
 app.listen(port, () => {
     console.log('Server is up on port' + port);
