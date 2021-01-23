@@ -13,7 +13,6 @@ const publicDirectoryPath = path.join(__dirname, '../public');
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
-app.set('view engine', 'html');
 
 app.use(express.json());
 app.use(userRouter);
