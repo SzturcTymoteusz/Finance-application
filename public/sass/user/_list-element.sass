@@ -1,0 +1,35 @@
+.list-element
+    border-bottom: 2px solid grey
+    margin-bottom: 5px
+    position: relative
+    top: 0
+    left: 0
+
+.list-element__price
+    font-size: 20px
+    font-weight: bold
+    &:hover::after
+        content: attr(data-description)
+        position: absolute
+        top: 0
+        left: -170px
+        width: 150px
+        background-color: #c2c2c2
+        border: 2px solid black
+        border-radius: 4px
+        z-index: 3
+        padding: 5px
+        font-size: 16px
+
+.list-element__btns
+    position: absolute
+    top: 0
+    right: 0
+
+.list-element__edit
+    &:hover
+        cursor: pointer
+
+.list-element__remove
+    &:hover
+        cursor: pointer

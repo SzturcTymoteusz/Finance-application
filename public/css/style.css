@@ -317,10 +317,12 @@
 
 .content {
   width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .content__main {
@@ -460,11 +462,17 @@
   color: black;
 }
 
-.content__expenses {
+.content__wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
   background-color: white;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .expenses {
@@ -472,6 +480,13 @@
   display: -ms-flexbox;
   display: flex;
   margin-left: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.expense--hidden {
+  display: none;
 }
 
 .expenses__category {
@@ -511,18 +526,6 @@
   padding: 10px;
 }
 
-.expenses__expenses-list-element {
-  border-bottom: 2px dashed black;
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.expenses__expenses-list-element:hover {
-  content: attr("<h1>Hallo<h1>");
-  cursor: pointer;
-}
-
 .expenses__summary {
   height: 40px;
   width: 100%;
@@ -530,4 +533,143 @@
   text-align: center;
   line-height: 40px;
   border-top: 2px solid black;
+}
+
+.list-element {
+  border-bottom: 2px solid grey;
+  margin-bottom: 5px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.list-element__price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list-element__price:hover::after {
+  content: attr(data-description);
+  position: absolute;
+  top: 0;
+  left: -170px;
+  width: 150px;
+  background-color: #c2c2c2;
+  border: 2px solid black;
+  border-radius: 4px;
+  z-index: 3;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.list-element__btns {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.list-element__edit:hover {
+  cursor: pointer;
+}
+
+.list-element__remove:hover {
+  cursor: pointer;
+}
+
+.edit-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+  background-color: #a3a3cd;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 20px;
+}
+
+.edit-profile--hidden {
+  display: none;
+}
+
+.edit-profile__form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-profile__title {
+  font-size: 48px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.edit-profile__element {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.edit-profile__label {
+  line-height: 40px;
+  font-size: 24px;
+  width: 100px;
+  font-weight: bold;
+}
+
+.edit-profile__input {
+  padding: 10px;
+  font-size: 20px;
+  width: 350px;
+  margin-right: 20px;
+}
+
+.edit-profile__btn {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #c73071;
+}
+
+.edit-profile__btn:hover {
+  background-color: #9b164f;
+  cursor: pointer;
+}
+
+.edit-profile__delete-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #c73071;
+}
+
+.edit-profile__delete-btn:hover {
+  background-color: #9b164f;
+  cursor: pointer;
 }

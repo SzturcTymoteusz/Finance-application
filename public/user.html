@@ -49,75 +49,114 @@
                 </ul>
 
             </article>
-            <article class="content__expenses expenses">
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Jedzenie
+            <section class="content__wrapper">
+                <article class="expenses">
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Jedzenie
+                        </div>
+                        <ul class="expenses__expenses-list">
+                            <li class="list-element" >
+                                <span class="list-element__price" data-description="Zakupy w biedronce Zakupy w biedronce Zakupy w biedronce Zakupy w biedronce">45 zł</span>
+                                <span class="list-element__btns">
+                                    <i class="fas fa-edit list-element__edit"></i>
+                                    <i class="fas fa-trash list-element__remove"></i>
+                                </span>
+                            </li>
+                            <li class="list-element" >
+                                <span class="list-element__price" data-description="Zakupy w biedronce Zakupy w biedronce Zakupy w biedronce Zakupy w biedronce">45 zł</span>
+                                <span class="list-element__btns">
+                                    <i class="fas fa-edit list-element__edit"></i>
+                                    <i class="fas fa-trash list-element__remove"></i>
+                                </span>
+                            </li>
+                            <li class="list-element" >
+                                <span class="list-element__price" data-description="Zakupy w biedronce Zakupy w biedronce Zakupy w biedronce Zakupy w biedronce">45 zł</span>
+                                <span class="list-element__btns">
+                                    <i class="fas fa-edit list-element__edit"></i>
+                                    <i class="fas fa-trash list-element__remove"></i>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list">
-                        <li class="expenses__expenses-list-element">
-                            45 zł
-                        </li>
-                        <li class="expenses__expenses-list-element">
-                            35 zł
-                        </li>
-                        <li class="expenses__expenses-list-element">
-                            65 zł
-                        </li>
-
-                    </ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Rachunki
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Rachunki
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Samochód
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Samochód
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">145 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">145 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Mieszkanie
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Mieszkanie
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Kosmetyki
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Kosmetyki
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Ubrania
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Ubrania
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Inne wydatki 
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Inne wydatki 
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-                <div class="expenses__category">
-                    <div class="expenses__title">
-                        Przychody
+                    <div class="expenses__category">
+                        <div class="expenses__title">
+                            Przychody
+                        </div>
+                        <ul class="expenses__expenses-list"></ul>
+                        <div class="expenses__summary">123 zł</div>
                     </div>
-                    <ul class="expenses__expenses-list"></ul>
-                    <div class="expenses__summary">123 zł</div>
-                </div>
-            </article>
+                </article>
+                <article class="content__expenses edit-profile edit-profile--hidden">
+                    <form class="edit-profile__form">
+                        <header class="edit-profile__title">Twoje dane</header>
+                        <div class="edit-profile__element">
+                            <label for="name" class="edit-profile__label">Imię</label>
+                            <input type="text" placeholder="Tymoteusz" name="name" class="edit-profile__input" maxlength="16">
+                            <button class="edit-profile__btn" data-name="name">Edytuj</button>
+                        </div>
+                        <div class="edit-profile__element">
+                            <label for="email" class="edit-profile__label">Email</label>
+                            <input type="text" placeholder="szturc11tymek@gmail.com" name="email" class="edit-profile__input" maxlength="25">
+                            <button class="edit-profile__btn" data-name="emial">Edytuj</button>
+                        </div>
+                        <div class="edit-profile__element">
+                            <label for="password" class="edit-profile__label">Hasło</label>
+                            <input type="text" name="password" class="edit-profile__input" maxlength="20">
+                            <button class="edit-profile__btn" data-name="password">Edytuj</button>
+                        </div>
+                        <div class="edit-profile__element">
+                            <label for="avatar" class="edit-profile__label">Zdjęcie</label>
+                            <input type="file" name="avatar" class="edit-profile__input">
+                            <button class="edit-profile__btn" data-name="avatar">Edytuj</button>
+                        </div>
+                    </form>
+                    <button class="edit-profile__delete-btn">Usuń konto</button>
+                </article>
+            </section>
         </section>
     </main>
 
