@@ -1,0 +1,44 @@
+.expenses
+    display: flex
+    margin-left: 20px
+
+.expenses__category
+    border: 2px solid black
+    flex-grow: 1
+    min-width: 110px
+    margin-right: 2px
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+
+.expenses__title
+    height: 40px
+    width: 100%
+    font-size: 24px
+    font-weight: bold
+    text-align: center
+    line-height: 40px
+    background-color: rgba(163, 163, 205, 1)
+    border-bottom: 2px solid black
+
+.expenses__expenses-list
+    flex-grow: 1
+    list-style: none
+    padding: 10px
+
+.expenses__expenses-list-element
+    border-bottom: 2px dashed black
+    margin-bottom: 5px
+    font-size: 20px
+    font-weight: bold
+    &:hover
+        content: attr('<h1>Hallo<h1>')
+        cursor: pointer
+
+.expenses__summary
+    height: 40px
+    width: 100%
+    font-size: 20px
+    text-align: center
+    line-height: 40px
+    border-top: 2px solid black

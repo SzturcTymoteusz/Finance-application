@@ -6,6 +6,7 @@ This project is a financial application. The user can creat account and save you
 The page is being built
 
 ## Technologies
+
 -   NodeJS (express, MongoDB)
 -   HTML5
 -   CSS3 (Preprocessor SASS)
@@ -14,4 +15,4 @@ The page is being built
 ## Setup
 
 To run this project, open link:
-https://szturc-finance-app.herokuapp.com
+https://finance-app-szturc.herokuapp.com/
