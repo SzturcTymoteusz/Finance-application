@@ -1,4 +1,114 @@
 .content
-    background-color: rgba(255, 255, 255, 0.97)
-    width: 1200px
+    width: 100%
     height: 100%
+    display: flex
+
+.content__main
+    background-color: rgba(163, 163, 205, 1)
+    width: 240px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 10px
+
+.content__avatar
+    height: 100px
+    width: 100px
+    align-self: center
+    margin-top: 20px
+    margin-bottom: 30px
+
+.content__user
+    font-size: 24px
+    line-height: 40px
+    margin: 0 auto
+    color: white
+
+.content__name
+    font-weight: bold
+    color: black
+    font-family: 'Bodoni Moda', serif
+
+.content__time
+    font-size: 20px
+    line-height: 40px
+    margin: 0 auto
+    color: white
+
+.content__arrow
+    &:hover
+        cursor: pointer
+        color: black
+
+.content__date
+    position: relative
+    top: -3px
+    left: 0
+
+.content__summary
+    margin-bottom: 20px
+    align-self: center
+    width: 80%
+
+.content__title
+    color: white
+    text-align: center
+    font-weight: bold
+    font-size: 20px
+    margin-bottom: 5px
+    margin-top: 20px
+
+.content__summary-incomes
+    color: white
+    position: relative
+    top: 0
+    left: 0
+
+.content__incomes-value
+    position: absolute
+    top: 0
+    right: 0
+    color: green
+    font-weight: bold
+
+.content__summary-expenses
+    color: white
+    position: relative
+    top: 0
+    left: 0
+
+.content__expenses-value
+    position: absolute
+    top: 0
+    right: 0
+    color: red
+    font-weight: bold
+
+.content__balance
+    color: white
+    margin-top: 20px
+    position: relative
+    top: 0
+    left: 0
+
+.content__balance-value
+    position: absolute
+    top: 0
+    right: 0
+    color: green
+    font-weight: bold
+
+.content__options-list
+    color: white
+    margin-top: 30px
+
+.content__option
+    font-size: 20px
+    margin-bottom: 10px
+    &:hover
+        cursor: pointer
+        color: black
+
+.content__expenses
+    background-color: white
+    flex-grow: 1

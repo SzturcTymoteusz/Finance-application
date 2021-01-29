@@ -7,21 +7,50 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&display=swap" rel="stylesheet">
     <title>ProsteFinanse</title>
 </head>
 <body>
     <main class="container">
         <header class="header conatiner__header">
-            <div class="header__user">
-                Witaj <span class="header__name">Tymoteusz</span>
-            </div>
-            <div class="header__time">
-                <i class="fas fa-chevron-left header__arrow"></i>
-                <span class="header__date">Styczeń 2021</span>
-                <i class="fas fa-chevron-right header__arrow"></i>
-            </div>
+            ProsteFinanse
         </header>
-        <article class="content container__content">hello</article>
+        <section class="content container__content">
+            <article class="content__main">
+                <img src="./img/tymek.jpg" alt="avatar" class="content__avatar">
+
+                <div class="content__user">
+                    Witaj <span class="content__name">Tymoteusz</span>
+                </div>
+
+                <div class="content__time">
+                    <i class="fas fa-chevron-left content__arrow"></i>
+                    <span class="content__date">Styczeń 2021</span>
+                    <i class="fas fa-chevron-right content__arrow"></i>
+                </div>
+
+                <div class="content__summary">
+                    <header class="content__title">Podsumowanie:</header>
+                    <div class="content__summary-incomes">
+                        Przychody: <span class="content__incomes-value"> 2000 zł</span>
+                    </div>
+                    <div class="content__summary-expenses">
+                        Wydatki:    <span class="content__expenses-value"> 1500 zł</span>
+                    </div>
+                    <div class="content__balance">
+                        Saldo: <span class="content__balance-value">500 zł</span>
+                    </div>
+                </div>
+
+                <ul class="content__options-list">
+                    <li class="content__option">Wydatki</li>
+                    <li class="content__option">Edytuj profil</li>
+                </ul>
+
+            </article>
+            <article class="content__expenses expenses">siemka</article>
+        </section>
     </main>
 
 
