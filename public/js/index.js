@@ -34,7 +34,7 @@ form.addEventListener('submit', async (e) => {
     const dataForm = new FormData(form);
     const value = Object.fromEntries(dataForm.entries());
 
-        const data = await fetch(`${url}/users`, {
+        const data = await fetch(`${url}/user`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
