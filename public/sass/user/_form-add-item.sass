@@ -1,0 +1,52 @@
+.form-add-item
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 10
+    background-color: rgba(163, 163, 205, 1)
+    border: 2px solid black
+    display: flex
+    flex-direction: column
+    padding: 10px
+
+.form-add-item--hidden
+    display: none
+
+.form-add-item__title
+    color: white
+    font-size: 28px
+    text-align: center
+
+.form-add-item__wrapper
+    height: 40px
+    margin: 5px
+    line-height: 40px
+    display: flex
+
+.form-add-item__label
+    color: white
+    font-size: 24px
+    margin-right: 20px
+    min-width: 100px
+
+.form-add-item__input
+    width: 200px
+    height: 35px
+    padding: 5px
+    font-size: 16px
+
+.form-add-item__input--description
+    height: 100px
+    resize: none
+    font-size: 18px
+
+.form-add-item__btn
+    align-self: center
+    margin-top: 80px
+    width: 100px
+    height: 35px
+    font-size: 24px
+    &:hover
+        cursor: pointer
+        background-color: #cec2c2

@@ -475,6 +475,23 @@
   display: flex;
 }
 
+.content__add-element {
+  color: white;
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.content__add-element:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.content__icon-plus {
+  position: relative;
+  top: 2px;
+  left: 0;
+}
+
 .expenses {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,4 +689,77 @@
 .edit-profile__delete-btn:hover {
   background-color: #9b164f;
   cursor: pointer;
+}
+
+.form-add-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #a3a3cd;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+.form-add-item--hidden {
+  display: none;
+}
+
+.form-add-item__title {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
+
+.form-add-item__wrapper {
+  height: 40px;
+  margin: 5px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-add-item__label {
+  color: white;
+  font-size: 24px;
+  margin-right: 20px;
+  min-width: 100px;
+}
+
+.form-add-item__input {
+  width: 200px;
+  height: 35px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.form-add-item__input--description {
+  height: 100px;
+  resize: none;
+  font-size: 18px;
+}
+
+.form-add-item__btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 80px;
+  width: 100px;
+  height: 35px;
+  font-size: 24px;
+}
+
+.form-add-item__btn:hover {
+  cursor: pointer;
+  background-color: #cec2c2;
 }

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +47,40 @@
                     <li class="content__option">Edytuj profil</li>
                 </ul>
 
+                <div class="content__add-element">
+                    <i class="fas fa-plus content__icon-plus"></i>
+                    Dodaj do listy 
+                </div>
+
             </article>
+
+            <form class="form-add-item">
+                <header class="form-add-item__title">Dodaj do listy</header>
+                <div class="form-add-item__wrapper">
+                    <label class="form-add-item__label" for="kind"> Rodzaj </label>
+                    <select name="kind" class="form-add-item__input" required>
+                        <option value="jedzenie">Jedzenie</option>
+                        <option value="rachunki">Rachunki</option>
+                        <option value="samochód">Samochód</option>
+                        <option value="mieszkanie">Mieszkanie</option>
+                        <option value="kosmetyki">Kosmetyki</option>
+                        <option value="ubrania">Ubrania</option>
+                        <option value="inne wydatki">Inne wydatki</option>
+                        <option value="przychody">Przychodzy</option>
+                    </select>
+                </div>
+                <div class="form-add-item__wrapper">
+                    <label class="form-add-item__label" for="amount"> Kwota </label>
+                    <input type="text" class="form-add-item__input" placeholder="Kwota [zł]" name="amount" required>
+                </div>
+                <div class="form-add-item__wrapper">
+                    <label class="form-add-item__label" for="description"> Opis </label>
+                    <textarea name="description" id="description" class="form-add-item__input form-add-item__input--description" placeholder="Opis" required></textarea>
+                </div>
+                <button class="form-add-item__btn" type="submit"> Dodaj </button>
+
+            </form>
+
             <section class="content__wrapper">
                 <article class="expenses">
                     <div class="expenses__category">
@@ -163,4 +195,3 @@
 
     <script src="./js/user/user.js"></script>
 </body>
-</html>
