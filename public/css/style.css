@@ -718,6 +718,10 @@
   color: white;
   font-size: 28px;
   text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .form-add-item__wrapper {
@@ -757,9 +761,21 @@
   width: 100px;
   height: 35px;
   font-size: 24px;
+  background-color: #c73071;
 }
 
 .form-add-item__btn:hover {
+  background-color: #9b164f;
   cursor: pointer;
-  background-color: #cec2c2;
+}
+
+.form-add-item__btn-close {
+  position: relative;
+  top: 3px;
+  left: 60px;
+  color: black;
+}
+
+.form-add-item__btn-close:hover {
+  cursor: pointer;
 }
