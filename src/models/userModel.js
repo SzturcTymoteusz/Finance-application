@@ -33,6 +33,14 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+userSchema.statics.findByCredential = async (email, password) => {
+    const user = await User.findOne({email});
+
+    // console.log(user);
+
+    return user;
+}
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

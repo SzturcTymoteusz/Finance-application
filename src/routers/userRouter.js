@@ -17,6 +17,19 @@ router.post('/user', validateEmail, async (req, res) => {
     }
 });
 
+// Login user
+router.post('/user/login', async (req, res) => {
+    try {
+        const user = await User.findByCredential(req.body.email);
+        
+        if(!user) throw new Error("Invalid data")
+        res.status(200).send(user)
+    } catch (error) {
+        res.status(400).send(error.message)
+    }
+
+})
+
 //  Get all user
 router.get('/user/getAll', async (req, res) => {
     try {
