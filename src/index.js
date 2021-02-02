@@ -2,6 +2,7 @@ const  express = require('express');
 const path = require('path');
 require('./db/mongoose');
 const userRouter = require('./routers/userRouter');
+const expensesRouter = require('./routers/expensesRouter');
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.static(publicDirectoryPath));
 
 app.use(express.json());
 app.use(userRouter);
+app.use(expensesRouter);
 
 app.get('/', (req, res) => {
     res.render('index');
