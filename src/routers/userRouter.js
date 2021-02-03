@@ -9,9 +9,11 @@ router.post('/user', validateEmail, async (req, res) => {
         if(!req.body.validation) throw new Error('Invalid email');
 
         const user = await new User(req.body)
+        const token = await user.generateAuthToken();
+
         await user.save();
 
-        res.status(201).send(user)
+        res.status(201).send({user, token})
     } catch (e) {
         res.status(400).send({error : e.message});
     }
@@ -20,12 +22,16 @@ router.post('/user', validateEmail, async (req, res) => {
 // Login user
 router.post('/user/login', async (req, res) => {
     try {
-        const user = await User.findByCredential(req.body.email);
-        
-        if(!user) throw new Error("Invalid data")
-        res.status(200).send(user)
+        const user = await User.findByCredential(req.body.email, req.body.password);
+
+        if(!user) throw new Error("Invalid data");
+
+        const token = await user.generateAuthToken();
+
+        res.status(200).send({user, token})
     } catch (error) {
-        res.status(400).send(error.message)
+
+        res.status(400).send({error: error.message})
     }
 
 })
@@ -40,7 +46,7 @@ router.get('/user/getAll', async (req, res) => {
         res.status(200).send(users);
 
     } catch (error) {
-        res.status(400).send({message: 'Something go wrong'})
+        res.status(400).send(JSON.stringify({message: 'Something go wrong'}))
     }
 });
 

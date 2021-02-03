@@ -13,5 +13,5 @@ btnOpenEditProfile.addEventListener('click', () => {
     windowExpenses.classList.add('expense--hidden');
     windowEditProfile.classList.remove('edit-profile--hidden');
 })
-console.log(windowExpenses);
-console.log(windowEditProfile);
+// console.log(windowExpenses);
+// console.log(windowEditProfile);

@@ -153,6 +153,16 @@
   background-color: #717191;
 }
 
+.login__error {
+  padding: 0 10px;
+  color: #c73071;
+  font-size: 18px;
+}
+
+.login__error--hidden {
+  visibility: hidden;
+}
+
 .login_btn--create {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

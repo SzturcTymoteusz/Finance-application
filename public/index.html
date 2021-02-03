@@ -22,8 +22,10 @@
         </section>
         <section class="login page_section">
             <form action="" class="login_form">
-                <input type="text" class="login_input" placeholder="Adres e-mail" name="e-mail">
-                <input type="password" class="login_input" placeholder="Hasło" name="passwor">
+                <input type="text" class="login_input" placeholder="Adres e-mail" name="email">
+                <input type="password" class="login_input" placeholder="Hasło" name="password">
+                <div class="login__error login__error--hidden">
+                </div>
                 <button type="submit" class="login_btn">Zaloguj się</button>
             </form>
             <button class="login_btn login_btn--create">Utwórz nowe konto</button>
@@ -33,7 +35,7 @@
         <header class="registration_title">Rejestracja</header>
         <form action="#" class="registration_form">
             <label for="name" class="registration_label">Imię</label>
-            <input type="text" class="registration_input" placeholder="Imię" name="name" required>
+            <input type="text" class="registration_input" placeholder="Imię" name="name" required maxlength="10">
             <label for="e-mail" class="registration_label">E-mail</label>
             <input type="text" class="registration_input" placeholder="E-mail" name="email" required>
             <label for="password" class="registration_label">Hasło</label>

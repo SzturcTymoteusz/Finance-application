@@ -5,12 +5,16 @@ const Expenses = require('../models/expensesModel.js');
 //  Create new expense
 router.post('/expenses', async (req, res) => {
     try {
-        const expense = await new Expenses(req.body)
+        const expense = await new Expenses({
+            ...req.body,
+            // owner: req.body._id
+        })
+        console.log(expense, "work")
         await expense.save();
 
         res.status(201).send(expense);
     } catch (error) {
-        res.status(400).send({message: 'Invalid data'})
+        res.status(400).send(error)
     }
 })
 
