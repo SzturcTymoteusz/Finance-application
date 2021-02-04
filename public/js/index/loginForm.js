@@ -2,8 +2,7 @@ const btnLogin = document.querySelector('.login_btn');
 const loginForm = document.querySelector('.login_form');
 const loginError = document.querySelector('.login__error');
 const loginInputs = [...document.querySelectorAll('.login_input')];
-const url = 'http://localhost:3000';
-// const url = 'https://finance-app-szturc.herokuapp.com';
+
 
 const loginFormHandling = () => {
 
@@ -14,7 +13,7 @@ const loginFormHandling = () => {
         const value = Object.fromEntries(dataForm.entries());
 
         try {
-            const data = await fetch(`${url}/user/login`, {
+            const data = await fetch(`${window.location.href}user/login`, {
                 method: 'POST',
                 headers:{
                     'Content-Type': 'application/json'
@@ -35,6 +34,7 @@ const loginFormHandling = () => {
             window.location.href = `user.html`;
 
         } catch (error) {
+            console.log(error)
             loginError.textContent = 'Niepoprawne dane';
             loginError.classList.remove('login__error--hidden');
         }

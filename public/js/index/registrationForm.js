@@ -4,9 +4,6 @@ const msgError = document.querySelector('.registration_error');
 const inputs = [...document.querySelectorAll('.registration_form input')];
 const page = document.querySelector('.page_container');
 
-const url = 'http://localhost:3000';
-// const url = 'https://finance-app-szturc.herokuapp.com';
-
 
 const registrationFormHandling = () => {
     registrationForm.addEventListener('submit', async (e) => {
@@ -15,7 +12,7 @@ const registrationFormHandling = () => {
         const dataForm = new FormData(registrationForm);
         const value = Object.fromEntries(dataForm.entries());
 
-        const data = await fetch(`${url}/user`, {
+        const data = await fetch(`${window.location.href}user`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
