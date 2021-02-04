@@ -1,6 +1,7 @@
 const express = require('express');
 const router = new express.Router();
 const Expenses = require('../models/expensesModel.js');
+const User = require('../models/userModel.js');
 
 //  Create new expense
 router.post('/expenses', async (req, res) => {
@@ -21,11 +22,15 @@ router.post('/expenses', async (req, res) => {
 // Read all expenses
 router.get('/expenses', async (req, res) => {
     try {
-        const expenses = await Expenses.find({});
+        const user = await User.findById('601bf5bad677dd2eb027ff20');
+        await user.populate('expenses').execPopulate();
 
-        res.status(200).send(expenses);
+        console.log(user.expenses)
+
+        res.status(200).send();
     } catch (error) {
-        res.status(400).send({message: 'Something go wrong'})
+        // res.status(400).send({message: 'Something go wrong'})
+        res.status(400).send(error.message)
     }
 })
 
@@ -33,6 +38,10 @@ router.get('/expenses', async (req, res) => {
 router.get('/expenses/:id', async (req, res) => {
     try {
         const expense = await Expenses.findById(req.params.id)
+
+        await expense.populate('owner').execPopulate();
+
+        console.log(expense.owner)
 
         res.status(200).send(expense);
     } catch (error) {
